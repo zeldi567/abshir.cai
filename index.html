@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Абшир-Сай дарыясы</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #f6f8fa 0%, #e9eef2 100%);
+      color: #222;
+      line-height: 1.9;
+      font-size: 1.25em;
+      opacity: 0;
+      transition: opacity 2s ease, background 0.5s ease, color 0.5s ease;
+      padding: 20px 40px 50px;
+    }
+
+    body.fade-in {
+      opacity: 1;
+    }
+
+    header {
+      background: linear-gradient(135deg, #004e7c, #0076a3);
+      color: white;
+      text-align: center;
+      padding: 40px 10px;
+      font-size: 2.2em;
+      letter-spacing: 1px;
+      border-bottom: 5px solid #00a3d6;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .theme-toggle, .video-button {
+      background: #00a3d6;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+    }
+
+    .theme-toggle:hover, .video-button:hover {
+      background: #0076a3;
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #0076a3;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      font-size: 1.7em;
+      border-bottom: 3px solid #00a3d6;
+      padding-bottom: 5px;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 25px;
+    }
+
+    strong {
+      color: #0076a3;
+      font-weight: 800;
+    }
+
+    .highlight {
+      font-weight: 700;
+      color: #005f87;
+      background: rgba(0, 163, 214, 0.15);
+      padding: 3px 7px;
+      border-radius: 5px;
+    }
+
+    em {
+      font-style: italic;
+      color: #0076a3;
+    }
+
+    img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 15px;
+      border: 2px solid #00a3d6;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      margin: 25px auto;
+      display: block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.07);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    body.dark {
+      background: linear-gradient(180deg, #0f0f0f 0%, #1c1c1c 100%);
+      color: #e5e5e5;
+    }
+
+    body.dark img {
+      border-color: #0097c2;
+    }
+
+    body.dark .theme-toggle,
+    body.dark .video-button {
+      background: #0097c2;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Абшир-Сай дарыясы</h1>
+    <div class="header-buttons">
+      <button class="theme-toggle" id="themeToggle">🌙 Караңгы тема</button>
+      <a href="https://youtu.be/VTlpz7HXwRM" target="_blank" class="video-button">▶ Видео көрүү</a>
+    </div>
+  </header>
+
+  <main>
+    <h2>Дарыя жана өрөөн жөнүндө</h2>
+    <p>
+      <strong>Абшир-Сай</strong> дарыясы Кичи-Алай тоосунун түндүк боорлорунан агып, аталган өрөөндү кыдырат. 
+      Өрөөндө белгилүү <strong>Суунун Каньону</strong> бар, ал жердеги эң негизги кызыкчылык — 
+      <strong>Абшир-Ата шаркыратмасы</strong> — чыныгы <em>табигый керемет</em>.
+    </p>
+    <img src="https://www.centralasia-travel.com/uploads/gallery/1440/abshir-ata-06.jpg" alt="Абшир-Ата шаркыратмасы 1">
+
+    <h2>Шаркыратма жана булак</h2>
+    <p>
+      100 метр бийиктиктен, диаметри эки метр болгон тегерек тешиктен суу күчтүү агым менен агып чыгат, 
+      бул агым суу түтүнүнө тоолонгон. Жакын аймакта чоң карсттык үңкүрдөн чыккан <strong>Котур-Булак</strong> булагы жайгашкан — 
+      <em>өрөөндүн эң көркөм жерлеринин бири</em>.
+    </p>
+    <img src="https://too.kg/wp-content/uploads/Kok-Jerty_3-1024x768.jpg" alt="Абшир-Ата шаркыратмасы 2">
+
+    <h2>Көл жана петроглифтер</h2>
+    <p>
+      10 чакырым алыстыкта <strong>Абшир-Сай көлү</strong> жайгашкан, анын суусу табигый тосмодон агат. 
+      Өрөөн <span class="highlight">ташын жазуулары</span> жана кооз пейзаждары менен белгилүү, 
+      туристтерди жана <strong>фотографтарды дүйнөнүн бардык бурчунан</strong> тартат.
+    </p>
+    <img src="https://too.kg/wp-content/uploads/Kok-Jerty_3-1024x768.jpg" alt="Абшир-Ата шаркыратмасы 3">
+
+    <h2>Флора жана фауна</h2>
+    <p>
+      Өрөөн өзүнүн бай флорасы жана фаунасы менен да белгилүү. Бул жерде сейрек өсүмдүктөрдү жана куштарды көрүүгө болот, 
+      жайында өрөөн гүлдөп, кооз оазиске айланат. <strong>Туристтер жана фотографтар</strong> бул жерди өзгөчө баалашат, 
+      анткени <em>уникалдуу панорамаларды жана табигый көрүнүштөрдү</em> байкай алышат.
+    </p>
+    <img src="https://www.centralasia-travel.com/uploads/gallery/1440/abshir-ata-03.jpg" alt="Абшир-Ата шаркыратмасы 4">
+  </main>
+
+  <script>
+    document.body.classList.add('fade-in');
+
+    const toggle = document.getElementById('themeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Жарык тема'
+        : '🌙 Караңгы тема';
+    });
+  </script>
+</body>
+</html>
